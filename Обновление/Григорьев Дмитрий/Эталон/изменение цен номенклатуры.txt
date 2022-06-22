@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+	<ClientApplicationWindow isMain="true">
+		<CommandInterface>
+			<CommandInterfaceGroup title="Панель разделов">
+				<CommandInterfaceButton title="CRM и маркетинг">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Меню функций">
+				<CommandInterfaceGroup title="Цены и скидки">
+					<CommandInterfaceButton title="Цены (прайс-лист)">
+						<click/>
+					</CommandInterfaceButton>
+				</CommandInterfaceGroup>
+			</CommandInterfaceGroup>
+		</CommandInterface>
+		<Form title="Избранное">
+			<FormTable name="Favs" title="Favs">
+				<gotoRow direction="down">
+					<Field title="Text column" cellText="История изменения цен"/>
+				</gotoRow>
+				<choose/>
+			</FormTable>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="История изменения цен">
+		<Form title="История изменения цен">
+			<FormTable name="Список" title="Список">
+				<gotoRow direction="down">
+					<Field title="Дата" cellText="01.05.2022"/>
+					<Field title="Комментарий" cellText="РП Санкт-Петербург"/>
+					<Field title="Номер" cellText="00-00000161"/>
+					<Field title="Ответственный" cellText="Стома Дмитрий Валерьевич"/>
+					<Field title="Подразделение" cellText="РП Санкт-Петербург"/>
+					<Field title="№" cellText="16"/>
+				</gotoRow>
+				<FormField name="СписокКомментарий" title="Комментарий">
+					<activate/>
+				</FormField>
+				<gotoRow/>
+				<choose/>
+			</FormTable>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Установка цен номенклатуры 00-00000161 от *">
+		<Form title="Установка цен номенклатуры 00-00000161 от *">
+			<FormGroup name="ГруппаШапка" title="Шапка">
+				<FormGroup name="ГруппаШапкаЛево" title="Шапка лево">
+					<FormGroup name="ГруппаНомерДата" title="Номер, дата">
+						<FormField name="Дата" title="от">
+							<startChoosing/>
+						</FormField>
+					</FormGroup>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Установка цен номенклатуры 00-00000161 от * *">
+		<Form title="Установка цен номенклатуры 00-00000161 от * *">
+			<FormGroup name="ГруппаШапка" title="Шапка">
+				<FormGroup name="ГруппаШапкаЛево" title="Шапка лево">
+					<FormGroup name="ГруппаНомерДата" title="Номер, дата">
+						<FormField name="Дата" title="от">
+							<inputText text="01.06.2022"/>
+						</FormField>
+					</FormGroup>
+				</FormGroup>
+			</FormGroup>
+			<FormField name="ог_Подразделение" title="Подразделение">
+				<activate/>
+				<closeDropList/>
+			</FormField>
+			<FormGroup name="ГруппаПодвал" title="Подвал">
+				<FormField name="Комментарий" title="Комментарий">
+					<activate/>
+				</FormField>
+			</FormGroup>
+			<FormGroup name="ГруппаЦены" title="Цены">
+				<FormGroup name="ГруппаСтраницы" title="Страницы">
+					<FormGroup name="ГруппаУстановкаЦен" title="Установка цен">
+						<FormGroup name="ГруппаУкажитеНоменклатуруУточнитеЦены" title="Укажите номенклатуру и цены">
+							<FormGroup name="УстановкаЦенПанельМастера" title="Установка цен панель мастера">
+								<FormButton name="ВидыЦенКомандаНазад" title="&lt; Перейти к изменению состава видов цен">
+									<activate/>
+									<click/>
+								</FormButton>
+							</FormGroup>
+						</FormGroup>
+					</FormGroup>
+					<FormGroup name="ГруппаВидыЦен" title="Виды цен">
+						<FormGroup name="ГруппаВыберитеВидыЦен" title="Выберите виды цен">
+							<FormTable name="ВыбранныеЦены" title="Выбранные цены">
+								<FormGroup name="ВыбранныеЦеныКоманднаяПанель" title="Командная панель">
+									<FormButton name="ВыбранныеЦеныЗагрузитьЭксель" title="Загрузка цены из файла">
+										<click/>
+									</FormButton>
+								</FormGroup>
+							</FormTable>
+						</FormGroup>
+					</FormGroup>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<setFileDialogResult result="true" filterIndex="0">
+		<filename>C:\Users\grigorievds\Desktop\Информация\2. ЧЦП\4. Загрузка ЧЦП в 1С\2. Загрузка ЧЦП срв и факт в ЕУС\6. Январь\Санкт-Петербург.xlsx</filename>
+	</setFileDialogResult>
+	<ClientApplicationWindow caption="Установка цен номенклатуры 00-00000161 от * *">
+		<Form title="Установка цен номенклатуры 00-00000161 от * *">
+			<FormGroup name="ГруппаЦены" title="Цены">
+				<FormGroup name="ГруппаСтраницы" title="Страницы">
+					<FormGroup name="ГруппаУстановкаЦен" title="Установка цен">
+						<FormGroup name="ГруппаУкажитеНоменклатуруУточнитеЦены" title="Укажите номенклатуру и цены">
+							<FormTable name="ДеревоЦен" title="Дерево цен">
+								<activate/>
+								<gotoRow direction="up">
+									<Field title="%" cellText="-100,00"/>
+									<Field title="Действующая цена" cellText="183,33"/>
+									<Field title="Изменение" cellText="-183,33"/>
+									<Field title="Номенклатура" cellText="Крышка б/у 1200х800"/>
+									<Field title="Отступ" cellText=""/>
+									<Field title="Упаковка" cellText="шт"/>
+									<Field title="Цена" cellText=""/>
+								</gotoRow>
+								<FormGroup name="ДеревоЦенГруппаЦеныВидЦеныa879c6a81b3411eaaaafa4bf0104a8b2" title="Чистая цена продажи, RUB">
+									<FormField name="ДеревоЦенСуммаИзмененияВидЦеныa879c6a81b3411eaaaafa4bf0104a8b2" title="Изменение">
+										<activate/>
+									</FormField>
+								</FormGroup>
+							</FormTable>
+						</FormGroup>
+					</FormGroup>
+				</FormGroup>
+			</FormGroup>
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаПровестиИЗакрыть" title="Провести и закрыть">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="1С:Предприятие">
+		<Form title="1С:Предприятие">
+			<FormGroup name="MainGroup" title="Main group">
+				<FormGroup name="Group" title="Group">
+					<FormGroup name="ButtonsGroup" title="ButtonsGroup">
+						<FormButton name="OK" title="OK">
+							<click/>
+						</FormButton>
+					</FormGroup>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Установка цен номенклатуры 00-00000161 от * *">
+		<close/>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="1С:Предприятие">
+		<Form title="1С:Предприятие">
+			<FormGroup name="Content" title="Content">
+				<FormGroup name="BottomGroup" title="Bottom group">
+					<FormGroup name="Buttons" title="Buttons">
+						<FormButton name="Button1" title="Нет">
+							<click/>
+						</FormButton>
+					</FormGroup>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="История изменения цен">
+		<Form title="История изменения цен">
+			<FormTable name="Список" title="Список">
+				<gotoRow/>
+				<choose/>
+			</FormTable>
+		</Form>
+	</ClientApplicationWindow>
+</uilog>
