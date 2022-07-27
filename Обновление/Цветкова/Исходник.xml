@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+            <ClientApplicationWindow isMain="true">
+                        <CommandInterface>
+                                    <CommandInterfaceGroup title="Панель разделов">
+                                               <CommandInterfaceButton title="Казначейство">
+                                                           <click/>
+                                               </CommandInterfaceButton>
+                                    </CommandInterfaceGroup>
+                                    <CommandInterfaceGroup title="Меню функций">
+                                               <CommandInterfaceGroup title="Планирование и контроль денежных средств">
+                                                           <CommandInterfaceButton title="Заявки на расходование ДС">
+                                                                       <click/>
+                                                           </CommandInterfaceButton>
+                                               </CommandInterfaceGroup>
+                                    </CommandInterfaceGroup>
+                        </CommandInterface>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow caption="Заявки на расходование денежных средств">
+                        <Form title="Заявки на расходование денежных средств">
+                                    <FormTable name="Список" title="Список">
+                                               <FormItemAddition name="СписокСтрокаПоиска" title="СписокСтрокаПоиска">
+                                                           <activate/>
+                                               </FormItemAddition>
+                                               <activate/>
+                                               <gotoRow direction="down">
+                                                           <Field title="Валюта" cellText="RUB"/>
+                                                           <Field title="Дата заявки" cellText="09:27"/>
+                                                           <Field title="Дата платежа" cellText="04.07.2022"/>
+                                                           <Field title="Заявитель" cellText="Смирнова Ирина Викторовна"/>
+                                                           <Field title="Назначение платежа" cellText="счет 354 от 19.04"/>
+                                                           <Field title="Номер" cellText="РЛ00-003726"/>
+                                                           <Field title="Оплачена" cellText="Нет"/>
+                                                           <Field title="Получатель" cellText="Култышев Игорь Васильевич"/>
+                                                           <Field title="Согласовано руководителем" cellText="Да"/>
+                                                           <Field title="Состояние ЭДО" cellText="Не начат"/>
+                                                           <Field title="Статус" cellText="Не согласована"/>
+                                                           <Field title="Сумма" cellText="7 000,00"/>
+                                                           <Field title="Хозяйственная операция" cellText="Оплата поставщику"/>
+                                               </gotoRow>
+                                               <FormField name="Статус" title="Статус">
+                                                           <activate/>
+                                               </FormField>
+                                               <gotoRow/>
+                                               <FormGroup name="СписокКонтекстноеМеню">
+                                                           <FormGroup name="ГруппаСписокКонтекстноеМеню" title="Список контекстное меню">
+                                                                       <FormButton name="СписокКонтекстноеМенюПоискПоТекущемуЗначению" title="Найти по текущему значению">
+                                                                                   <click/>
+                                                                       </FormButton>
+                                                           </FormGroup>
+                                               </FormGroup>
+                                               <FormField name="Номер" title="Номер">
+                                                           <activate/>
+                                               </FormField>
+                                               <FormField name="Статус" title="Статус">
+                                                           <activate/>
+                                               </FormField>
+                                               <gotoRow direction="down">
+                                                           <Field title="Валюта" cellText="RUB"/>
+                                                           <Field title="Дата заявки" cellText="20.06.2022"/>
+                                                           <Field title="Дата платежа" cellText="30.06.2022"/>
+                                                           <Field title="Заявитель" cellText="Родионова Виктория Леонидовна"/>
+                                                           <Field title="Назначение платежа" cellText="916 от 15.06"/>
+                                                           <Field title="Номер" cellText="РЛ00-003626"/>
+                                                           <Field title="Оплачена" cellText="Нет"/>
+                                                           <Field title="Получатель" cellText="ЛИГА ПЕРЕВОЗОК ООО"/>
+                                                           <Field title="Согласовано руководителем" cellText="Да"/>
+                                                           <Field title="Состояние ЭДО" cellText="Не начат"/>
+                                                           <Field title="Статус" cellText="Не согласована"/>
+                                                           <Field title="Сумма" cellText="17 000,00"/>
+                                                           <Field title="Хозяйственная операция" cellText="Оплата поставщику"/>
+                                               </gotoRow>
+                                               <choose/>
+                                    </FormTable>
+                        </Form>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow caption="Заявка на расходование ДС РЛ00-003626 от *">
+                        <CommandInterface>
+                                    <CommandInterfaceGroup title="Панель навигации">
+                                               <CommandInterfaceButton title="Файлы">
+                                                           <click/>
+                                               </CommandInterfaceButton>
+                                    </CommandInterfaceGroup>
+                                    <CommandInterfaceButton title="Основное">
+                                               <click/>
+                                    </CommandInterfaceButton>
+                        </CommandInterface>
+                        <Form title="Заявка на расходование ДС РЛ00-003626 от *">
+                                    <FormGroup name="ГруппаСтраницы" title="Страницы">
+                                               <FormGroup name="СтраницаРасшифровка" title="Расшифровка платежа">
+                                                           <activate/>
+                                                           <FormGroup name="ГруппаКомандыРасшифровки" title="Команды расшифровки">
+                                                                       <FormField name="ПереключательРасшифровки" title="ПереключательРасшифровки">
+                                                                                   <activate/>
+                                                                       </FormField>
+                                                           </FormGroup>
+                                                           <FormGroup name="СтраницыРасшифровки" title="Страницы расшифровки">
+                                                                       <FormGroup name="РасшифровкаБезРазбиения" title="Расшифровка без разбиения">
+                                                                                   <FormField name="РасшифровкаБезРазбиенияЗаказ" title="Объект расчетов">
+                                                                                               <activate/>
+                                                                                               <open/>
+                                                                                   </FormField>
+                                                                       </FormGroup>
+                                                           </FormGroup>
+                                               </FormGroup>
+                                    </FormGroup>
+                        </Form>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow caption="Приобретение услуг и прочих активов РЛ00-002355 от *">
+                        <close/>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow caption="Заявка на расходование ДС РЛ00-003626 от *">
+                        <Form title="Заявка на расходование ДС РЛ00-003626 от *">
+                                    <FormGroup name="ГруппаСтраницы" title="Страницы">
+                                               <FormGroup name="СтраницаОсновное" title="Основное">
+                                                           <activate/>
+                                                           <FormField name="ДокументОснование" title="Основание">
+                                                                       <activate/>
+                                                           </FormField>
+                                               </FormGroup>
+                                    </FormGroup>
+                                    <FormGroup name="ГруппаСтатусПриоритет" title="Статус приоритет">
+                                               <FormField name="Статус" title="Статус">
+                                                           <activate/>
+                                                           <openDropList/>
+                                                           <closeDropList/>
+                                               </FormField>
+                                    </FormGroup>
+                                    <FormGroup name="ГруппаСтраницы" title="Страницы">
+                                               <FormGroup name="СтраницаРасшифровка" title="Расшифровка платежа">
+                                                           <activate/>
+                                                           <FormGroup name="ГруппаКомандыРасшифровки" title="Команды расшифровки">
+                                                                       <FormField name="ПереключательРасшифровки" title="ПереключательРасшифровки">
+                                                                                   <activate/>
+                                                                       </FormField>
+                                                           </FormGroup>
+                                               </FormGroup>
+                                               <FormGroup name="СтраницаОсновное" title="Основное">
+                                                           <activate/>
+                                                           <FormField name="ДокументОснование" title="Основание">
+                                                                       <activate/>
+                                                           </FormField>
+                                               </FormGroup>
+                                               <FormGroup name="СтраницаРасшифровка" title="Расшифровка платежа">
+                                                           <activate/>
+                                                           <FormGroup name="ГруппаКомандыРасшифровки" title="Команды расшифровки">
+                                                                       <FormField name="ПереключательРасшифровки" title="ПереключательРасшифровки">
+                                                                                   <activate/>
+                                                                       </FormField>
+                                                           </FormGroup>
+                                               </FormGroup>
+                                               <FormGroup name="СтраницаРаспределениеПоСчетам" title="Распределение по счетам">
+                                                           <activate/>
+                                                           <FormTable name="РаспределениеПоСчетам" title="Распределение по счетам">
+                                                                       <activate/>
+                                                           </FormTable>
+                                               </FormGroup>
+                                               <FormGroup name="СтраницаОсновное" title="Основное">
+                                                           <activate/>
+                                                           <FormField name="ДокументОснование" title="Основание">
+                                                                       <activate/>
+                                                                       <click/>
+                                                           </FormField>
+                                               </FormGroup>
+                                    </FormGroup>
+                        </Form>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow caption="Приобретение услуг и прочих активов РЛ00-002355 от *">
+                        <Form title="Приобретение услуг и прочих активов РЛ00-002355 от *">
+                                    <FormGroup name="ГруппаСтраницы" title="Страницы">
+                                               <FormGroup name="ГруппаРасходы" title="Расходы и прочие активы">
+                                                           <activate/>
+                                                           <FormTable name="Расходы" title="Расходы">
+                                                                       <activate/>
+                                                           </FormTable>
+                                               </FormGroup>
+                                    </FormGroup>
+                        </Form>
+                        <close/>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow isMain="true">
+                        <CommandInterface>
+                                    <CommandInterfaceGroup title="Панель разделов">
+                                               <CommandInterfaceButton title="Закупки">
+                                                           <click/>
+                                               </CommandInterfaceButton>
+                                    </CommandInterfaceGroup>
+                                    <CommandInterfaceGroup title="Меню функций">
+                                               <CommandInterfaceGroup title="Закупки">
+                                                           <CommandInterfaceButton title="Документы закупки (все)">
+                                                                       <click/>
+                                                           </CommandInterfaceButton>
+                                               </CommandInterfaceGroup>
+                                    </CommandInterfaceGroup>
+                        </CommandInterface>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow caption="Документы закупки (все)">
+                        <Form title="Документы закупки (все)">
+                                    <FormTable name="СписокДокументыЗакупки" title="Список документы закупки">
+                                               <FormItemAddition name="СписокДокументыЗакупкиСтрокаПоиска" title="СписокДокументыЗакупкиСтрокаПоиска">
+                                                           <activate/>
+                                               </FormItemAddition>
+                                    </FormTable>
+                        </Form>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow isMain="true">
+                        <CommandInterface>
+                                    <CommandInterfaceGroup title="Панель открытых">
+                                               <CommandInterfaceButton title="Заявка на расходование ДС РЛ00-003626 от 20.06.2022 10:56:10">
+                                                           <click/>
+                                               </CommandInterfaceButton>
+                                    </CommandInterfaceGroup>
+                        </CommandInterface>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow caption="Заявка на расходование ДС РЛ00-003626 от *">
+                        <Form title="Заявка на расходование ДС РЛ00-003626 от *">
+                                    <activate/>
+                        </Form>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow isMain="true">
+                        <CommandInterface>
+                                    <CommandInterfaceGroup title="Панель разделов">
+                                               <CommandInterfaceButton title="Закупки">
+                                                           <click/>
+                                               </CommandInterfaceButton>
+                                    </CommandInterfaceGroup>
+                                    <CommandInterfaceGroup title="Меню функций">
+                                               <CommandInterfaceButton title="Отчеты по закупкам">
+                                                           <click/>
+                                               </CommandInterfaceButton>
+                                    </CommandInterfaceGroup>
+                        </CommandInterface>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow caption="Отчеты по закупкам">
+                        <Form title="Отчеты по закупкам">
+                                    <FormGroup name="Страницы" title="Страницы">
+                                               <FormGroup name="Основное" title="Основное">
+                                                           <FormGroup name="Колонки" title="Колонки">
+                                                                       <FormGroup name="СГруппой" title="С группой">
+                                                                                   <FormGroup name="СГруппойКолонка2" title="С группой колонка 2">
+                                                                                               <FormGroup name="Подсистема_Закупки_Подсистема_РасчетыСПоставщиками_1" title="Расчеты с поставщиками">
+                                                                                                          <FormDecoration name="Вариант_d2262ccdac1f11e9aa97a4bf0104a8b2_Подсистема_f70adb07ac1c11e9aa97a4bf0104a8b2" title="Ведомость расчетов с поставщиками">
+                                                                                                                      <activate/>
+                                                                                                                      <click/>
+                                                                                                          </FormDecoration>
+                                                                                               </FormGroup>
+                                                                                   </FormGroup>
+                                                                       </FormGroup>
+                                                           </FormGroup>
+                                               </FormGroup>
+                                    </FormGroup>
+                        </Form>
+            </ClientApplicationWindow>
+            <ClientApplicationWindow caption="Ведомость расчетов с поставщиками">
+                        <close/>
+            </ClientApplicationWindow>
+</uilog>
